@@ -1,0 +1,7 @@
+<button (click)="toggle()">Toggle list</button>
+
+<ul *ngIf="visible">
+    <li *ngFor="let element of data">
+        {{ element.text }}
+    </li>
+</ul>

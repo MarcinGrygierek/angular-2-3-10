@@ -1,0 +1,15 @@
+@let response = suggestions$ | async;
+
+<input name="searchQuery" [formControl]="searchQuery" type="text">
+@if(response && response.error) {
+<p>{{response.error}}</p>
+}
+@if(response && response.data) {
+<ul>
+    @for(show of response.data; track show.id) {
+    <li>
+        {{ show.name }}
+    </li>
+    }
+</ul>
+}

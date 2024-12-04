@@ -1,0 +1,5 @@
+<app-field-container [formGroup]="group">
+    <label [for]="name">{{ label }}</label>
+    <textarea [id]="name" [name]="name" [formControlName]="name"></textarea>
+    <app-input-errors [errors]="errors" />
+</app-field-container>

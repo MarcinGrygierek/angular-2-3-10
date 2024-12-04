@@ -1,0 +1,23 @@
+<h2>Everyone</h2>
+<ul>
+    <!-- <li *ngFor="let user of users$ | async; trackBy: userTrackBy">
+        {{ user.name }}
+    </li> -->
+
+    @let users = users$ | async;
+
+    @for(user of users; track user.id) {
+    <li>
+        {{ user.name }}, {{ user.age }}
+    </li>
+    }
+</ul>
+
+<h2>Adults</h2>
+<ul>
+    @for(user of (adults$ | async); track user.id) {
+    <li>
+        {{ user.name }}, {{ user.age }}
+    </li>
+    }
+</ul>

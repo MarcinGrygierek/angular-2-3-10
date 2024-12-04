@@ -1,0 +1,7 @@
+@let pokemon = pokemon$ | async;
+
+@if(pokemon) {
+<h2>{{ pokemon.name }}</h2>
+<p>Weight: {{ pokemon.weight }}</p>
+<p>Height: {{ pokemon.height }}</p>
+}

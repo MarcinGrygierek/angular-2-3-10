@@ -1,0 +1,41 @@
+<header>
+  <h1>
+    Router APP
+  </h1>
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/home">Home</a>
+      </li>
+      <li>
+        <a routerLink="/about">About</a>
+      </li>
+      <li>
+        <a routerLink="/test">Test A/B</a>
+      </li>
+      <li>
+        <a routerLink="/pokemon/about">About Pokemon</a>
+      </li>
+      <li>
+        <a routerLink="/pokemon/first/pikachu">First - Pikachu</a>
+      </li>
+      <li>
+        <a routerLink="/pokemon/first/charizard">First - Charizard</a>
+      </li>
+      <li>
+        <a routerLink="/pokemon/second/pikachu">Second - Pikachu</a>
+      </li>
+      <li>
+        <a routerLink="/pokemon/second/charizard">Second - Charizard</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+@if(isPreloading$ | async) {
+  <app-preloader />
+}
+
+<main>
+  <router-outlet></router-outlet>
+</main>

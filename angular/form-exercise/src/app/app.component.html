@@ -1,0 +1,10 @@
+@let result = result$ | async;
+
+<form [formGroup]="form">
+  <input type="number" name="first" formControlName="first">
+  <input type="number" name="second" formControlName="second">
+  @if(result) {
+    <p>Sum: {{ result[0] }}</p>
+    <p>Product: {{ result[1] }}</p>
+  }
+</form>

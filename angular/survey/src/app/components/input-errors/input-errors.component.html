@@ -1,0 +1,4 @@
+@if(hasAnyError()) {
+@if(hasError('required')) { <p>This field is required</p> }
+@if(hasError('minlength')) { <p>This field is too short - {{ getError('minlength').requiredLength}}.</p> }
+}

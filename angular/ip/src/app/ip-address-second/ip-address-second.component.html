@@ -1,0 +1,4 @@
+<h2>{{ ip() }}</h2>
+<h2>{{ ipFromEvent$ | async }}</h2>
+<button (click)="fetchIpAddress()">Fetch IP address</button>
+<button #button>Fetch IP address using fromEvent</button>

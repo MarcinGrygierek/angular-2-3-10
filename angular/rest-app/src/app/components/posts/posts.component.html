@@ -1,0 +1,16 @@
+<h1>Posts</h1>
+
+@if(error()) {
+    <p>{{ error() }}</p>
+}
+
+<ul>
+    @for(post of posts(); track post.id) {
+    <li>
+        <h2>{{ post.title }}</h2>
+        <p>Views: <strong>{{post.views}}</strong></p>
+    </li>
+    }
+
+    
+</ul>

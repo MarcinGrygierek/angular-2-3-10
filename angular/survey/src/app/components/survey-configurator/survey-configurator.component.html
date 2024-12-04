@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="handleSubmit()">
+    <app-input type="text" name="title" label="Title" [group]="form" />
+    <app-textarea name="description" label="Description" [group]="form" />
+
+    <ng-container formArrayName="questions">
+        @for(question of questions; track $index) {
+        <div [formGroup]="question">
+            <app-input type="text" name="question" label="Question" [group]="question" />
+            @if(questions.length > 1) {
+            <button (click)="removeQuestion($index)">Remove question</button>
+            }
+        </div>
+        }
+        <button (click)="addNewQuestion()">Add new question</button>
+    </ng-container>
+
+    <button type="submit">Save</button>
+</form>
