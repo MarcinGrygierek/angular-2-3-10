@@ -1,0 +1,21 @@
+<h1 data-testid="app-title">Test App</h1>
+<nav>
+  <ul>
+    <li>
+      <a data-testid="data-link" routerLink="/data">Data</a>
+    </li>
+    <li>
+      <a routerLink="/">Home</a>
+    </li>
+  </ul>
+</nav>
+<main>
+  <button data-testid="auth-button" (click)="handleLogin()">Log in</button>
+
+  @if(isAuthenticated()) {
+
+  <p data-testid="auth-info">You are logged in!</p>
+  }
+
+  <router-outlet></router-outlet>
+</main>

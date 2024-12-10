@@ -1,0 +1,6 @@
+<app-actions />
+<ul>
+    @for(element of elements(); track $index) {
+    <app-element [element]="element" />
+    }
+</ul>
