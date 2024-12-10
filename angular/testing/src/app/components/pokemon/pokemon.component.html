@@ -1,0 +1,6 @@
+<button data-testid="list-button" (click)="getData()">Get data</button>
+<ul>
+    @for(pokemon of pokemons(); track pokemon) {
+        <li data-testid="list-element">{{ pokemon }}</li>
+    }
+</ul>

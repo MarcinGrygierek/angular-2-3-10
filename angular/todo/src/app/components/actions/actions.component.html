@@ -1,0 +1,4 @@
+<form [formGroup]="taskForm" (ngSubmit)="handleSubmit()">
+    <input type="text" name="name" formControlName="name" />
+    <button type="submit">Add</button>
+</form>

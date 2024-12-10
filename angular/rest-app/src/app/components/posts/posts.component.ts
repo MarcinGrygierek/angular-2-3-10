@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, Inject, inject, OnInit, signal } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { PostsService } from '../../services/posts.service';
 import { Post } from '../../types/post';
@@ -11,6 +11,7 @@ import { Post } from '../../types/post';
 })
 export class PostsComponent implements OnInit {
   private postsService = inject(PostsService);
+
   posts = signal<Post[]>([]);
   error = signal<string>('');
 

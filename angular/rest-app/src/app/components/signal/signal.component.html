@@ -1,0 +1,11 @@
+<h1>Length: {{ count() }}</h1>
+<h2>Double value: {{ doubleCount() }}</h2>
+<ul>
+    @for(element of readonlyElements(); track $index) {
+        <li>
+            {{ element }}
+        </li>
+    }
+    <button (click)="addNewElement()">Add new element</button>
+    <button (click)="reset()">Reset array</button>
+</ul>

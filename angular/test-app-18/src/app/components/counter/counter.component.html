@@ -1,0 +1,6 @@
+@let counter = counter$ | async;
+
+@if(counter) {
+    <h1>{{ counter.value }}</h1>
+}
+<button (click)="handleIncrement()">+1</button>
